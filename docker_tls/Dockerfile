@@ -14,8 +14,18 @@ ARG speedtestrate
 ARG paneltype
 ARG usemysql
 
-RUN wget -N --no-check-certificate https://raw.githubusercontent.com/RManOfCN/pay-v2ray-sspanel-v3-mod_Uim-plugin/master/install-release.sh &&chmod +x install-release.sh
+RUN wget -N --no-check-certificate https://raw.githubusercontent.com/CodeSheng/zebra/master/install-release.sh &&chmod +x install-release.sh
 RUN bash install-release.sh --panelurl ${panelurl} --panelkey ${panelkey} --nodeid ${nodeid} --downwithpanel ${downwithpanel} --speedtestrate ${speedtestrate} --paneltype ${paneltype} --usemysql ${usemysql}
+
+#安装 caddy
+ARG nodeurl
+ARG mail
+ARG fakeurl
+ARG v2ray_path
+ARG v2ray_port
+
+RUN wget -N --no-check-certificate https://raw.githubusercontent.com/CodeSheng/zebra/master/install_caddy.sh && chmod +x install_caddy.sh
+RUN bash install_caddy.sh ${nodeurl} ${mail} ${fakeurl} ${v2ray_path} ${v2ray_port}
 
 COPY ./start.sh /
 RUN chmod 755 /start.sh
