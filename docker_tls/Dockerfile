@@ -13,9 +13,10 @@ ARG downwithpanel
 ARG speedtestrate
 ARG paneltype
 ARG usemysql
+ARG LDNS
 
 RUN wget -N --no-check-certificate https://raw.githubusercontent.com/CodeSheng/zebra/master/install-release.sh &&chmod +x install-release.sh
-RUN bash install-release.sh --panelurl ${panelurl} --panelkey ${panelkey} --nodeid ${nodeid} --downwithpanel ${downwithpanel} --speedtestrate ${speedtestrate} --paneltype ${paneltype} --usemysql ${usemysql}
+RUN bash install-release.sh --panelurl ${panelurl} --panelkey ${panelkey} --nodeid ${nodeid} --downwithpanel ${downwithpanel} --speedtestrate ${speedtestrate} --paneltype ${paneltype} --usemysql ${usemysql} --LDNS ${LDNS}
 
 #安装 caddy
 ARG nodeurl
