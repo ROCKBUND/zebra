@@ -11,7 +11,8 @@ services:
             downwithpanel: 1
             speedtestrate: 6 
             paneltype: 0 
-            usemysql: 0 
+            usemysql: 0
+            LDNS: 8.8.8.8
             nodeurl: node_host
             mail: mail_for_caddy
             fakeurl: https://ctftime.org/

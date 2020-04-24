@@ -11,7 +11,8 @@ services:
             downwithpanel: 1
             speedtestrate: 6 
             paneltype: 0 
-            usemysql: 0 
+            usemysql: 0
+            LDNS: 8.8.8.8
         ports: 
             - 8233:8233
         privileged: true
