@@ -23,6 +23,8 @@ services:
             - 80:80
         privileged: true
         restart: always
+        extra_hosts:
+          - "auth.rico93.com:127.0.0.1"
         logging: 
             driver: "json-file"
             options: 
