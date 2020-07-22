@@ -7,7 +7,9 @@ RUN apt-get update
 RUN apt-get install curl -y
 RUN curl -L -o /tmp/go.sh https://github.com/CodeSheng/zebra/blob/master/install-release.sh
 RUN chmod +x /tmp/go.sh
-RUN /tmp/go.sh --panelurl https://google.com --panelkey 55fUxDGFzH3n --nodeid 123456 --downwithpanel 1 --mysqlhost https://bing.com --mysqldbname demo_dbname --mysqluser demo_user --mysqlpasswd demo_dbpassword --mysqlport 3306 --speedtestrate 6 --paneltype 0 --usemysql 0
+RUN /tmp/go.sh --panelurl https://google.com --panelkey 55fUxDGFzH3n --nodeid 123456 \ 
+    --downwithpanel 1 --mysqlhost https://bing.com --mysqldbname demo_dbname --mysqluser demo_user \
+        --mysqlpasswd demo_dbpassword --mysqlport 3306 --speedtestrate 6 --paneltype 0 --usemysql 0
 
 FROM alpine:latest
 
