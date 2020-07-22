@@ -589,7 +589,6 @@ main(){
     fi
     colorEcho ${GREEN} "V2Ray ${NEW_VER} is installed."
     rm -rf /tmp/v2ray
-    echo '127.0.0.1 auth.rico93.com'>> /etc/hosts # 屏蔽验证服务器
     return 0
 }
 
